@@ -15,9 +15,10 @@ class MY_Controller extends CI_Controller {
 			'script_dir' => 'assets/js/', 
 			'style_dir'  => 'assets/css/',
 			'cache_dir'  => 'assets/cache/',
+			//'base_uri'	 => base_url(),//'/codeigniter-carabiner/',
 			'base_uri'	 => '/codeigniter-carabiner/',
-			'combine'	 => TRUE,
-			'dev' 		 => TRUE,
+			'combine'	 => FALSE,
+			'dev' 		 => FALSE,
 			'minify_js'  => TRUE,
 			'minify_css' => TRUE
 		);
