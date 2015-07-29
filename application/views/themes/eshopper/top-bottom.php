@@ -17,9 +17,9 @@
                             <ul role="menu" class="sub-menu">
                                 <li><a href="<?php echo site_url('products')?>">Products</a></li>
                                 <li><a href="product-details.html">Product Details</a></li> 
-                                <li><a href="checkout.html">Checkout</a></li> 
-                                <li><a href="cart.html">Cart</a></li> 
-                                <li><a href="login.html">Login</a></li> 
+                                <li><a href="<?php echo site_url('shops/checkout') ?>">Checkout</a></li> 
+                                <li><a href="<?php echo site_url('shops/cart') ?>">Cart</a></li> 
+                                <li><a href="<?php echo site_url('shops/login') ?>">Login</a></li> 
                             </ul>
                         </li> 
                         <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>

@@ -6,7 +6,7 @@
                 <div class="productinfo text-center">
                     <img src="<?php echo ctConfig('upload_path') ?>home/product1.jpg" alt="" />
                     <h2>$56</h2>
-                    <p>Easy Polo Black Edition</p>
+                    <p>Easy Polo Black Editions</p>
                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-overlay">
@@ -14,6 +14,7 @@
                         <h2>$56</h2>
                         <p>Easy Polo Black Edition</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        <a href="<?php echo site_url('product/detail/sample-product'); ?>" class="btn btn-default add-to-cart"><i class="fa fa-search"></i>Detail</a>
                     </div>
                 </div>
             </div>

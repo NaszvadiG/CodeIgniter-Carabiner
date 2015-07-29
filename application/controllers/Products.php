@@ -14,4 +14,9 @@ class Products extends MY_Controller {
         $this->load->view(ctTemplate(), $this->data);
     }
 
+    public function detail($id = NULL) {
+        $this->data['view'] = 'product-single';
+        $this->load->view(ctTemplate(), $this->data);
+    }
+
 }
