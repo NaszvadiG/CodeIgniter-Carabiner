@@ -1,1 +1,0 @@
- <?php $this->carabiner->display('js'); ?>

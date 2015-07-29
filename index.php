@@ -282,6 +282,10 @@ switch (ENVIRONMENT)
 
 	define('VIEWPATH', $view_folder);
 
+        $basePath = dirname($_SERVER["SCRIPT_NAME"]);
+        $pathArray = explode(DIRECTORY_SEPARATOR, $basePath);
+        $pathArray = $pathArray[0] . '/';
+        define('ROOTPATH', $pathArray);
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

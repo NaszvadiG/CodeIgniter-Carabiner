@@ -2,15 +2,15 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Homepage extends MY_Controller {
+class Contact extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+        $this->data["ctTemplate_slider"] = FALSE;
     }
 
     public function index() {
-        $this->data['view'] = 'homepage';
-        $this->load->view(ctTemplate(), $this->data);
+        $this->load->view(ctTemplate('front', 'template-contact'), $this->data);
     }
 
 }
