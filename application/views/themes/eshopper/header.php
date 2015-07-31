@@ -5,7 +5,7 @@
 
 <title>Home | E-Shopper</title>
 
-<?php $this->carabiner->display('css'); ?>
+<?php $this->carabiner->display('front','css'); ?>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>

@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/codeigniter-carabiner/';
+$config['base_url'] = 'http://ecommerce.local/';
 
 /*
 |--------------------------------------------------------------------------
@@ -498,3 +498,8 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+$config['modules_locations'] = array(
+    APPPATH.'modules/' => '../modules/',
+);

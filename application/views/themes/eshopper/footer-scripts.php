@@ -1,1 +1,1 @@
-<?php $this->carabiner->display('js'); ?>
+<?php $this->carabiner->display('front','js'); ?>

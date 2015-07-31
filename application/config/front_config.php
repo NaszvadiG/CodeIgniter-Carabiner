@@ -9,7 +9,7 @@
 $config['template_path'] = 'themes';
 
 $config['front_template'] = 'eshopper';
-$config['admin_template'] = 'default';
+$config['admin_template'] = 'admin';
 
 $config['template_container_file'] = 'template';
 
