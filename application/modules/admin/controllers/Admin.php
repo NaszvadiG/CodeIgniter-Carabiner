@@ -1,12 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends MX_Controller {
+class Admin extends MX_Controller 
+{
 
-    public function __construct() {
+    public function __construct() 
+    {
         parent::__construct();
     }
 
-    public function index() {
+    public function index() 
+    {
         $this->data["carabiner_css"] = 'admin-plugin';
         $this->data["carabiner_js"] = 'admin-chart';
         
@@ -20,9 +23,12 @@ class Admin extends MX_Controller {
         $this->data['view'] = 'dashboard';
         $this->load->view(ctTemplate('admin'), $this->data);
     }
-    public function auth() {
+    
+    public function auth() 
+    {
         redirect(base_url('admin'));
     }
+    
     public function login() {
         $css = array(
             array('bower_components/bootstrap/dist/css/bootstrap.min.css'),
