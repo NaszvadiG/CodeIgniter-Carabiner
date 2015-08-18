@@ -70,39 +70,28 @@ class MX_Controller {
         $this->carabiner->config($carabiner_config);
 
         $css["global"] = array(
-            array('bower_components/bootstrap/dist/css/bootstrap.min.css'),
-            array('bower_components/metisMenu/dist/metisMenu.min.css'),
-            array('bower_components/font-awesome/css/font-awesome.min.css'),
-            
-        );
-        $css["plugins"] = array(
-            array('dist/css/timeline.css'),
-            array('bower_components/morrisjs/morris.css'),
+            array('dist/css/bootstrap.min.css'),
+            array('dist/css/veneto-admin.min.css'),
         );
         
-        $css["themes"] = array(
-            array('dist/css/sb-admin-2.css'),
-            
-        );
+        $css["themes"] = array( array('demo/css/demo.css'), );
+        $css["fonts"] = array( array('dist/assets/font-awesome/css/font-awesome.css'),);
 
         $this->carabiner->group('admin', array('css' => $css["global"]));
-        $this->carabiner->group('admin-plugin', array('css' => $css["plugins"]));
         $this->carabiner->group('admin-theme', array('css' => $css["themes"]));
+        $this->carabiner->group('admin-fonts', array('css' => $css["fonts"]));
         
         $js["global"] = array(
-            array('bower_components/jquery/dist/jquery.min.js'),
-            array('bower_components/bootstrap/dist/js/bootstrap.min.js'),
-            array('dist/js/meetisMenu.js'),
-            array('bower_components/metisMenu/dist/metisMenu.min.js'),
-        );
-        
-        
-        $js["theme"] = array(
-            array('dist/js/sb-admin-2.js'),
+            array('dist/assets/libs/jquery/jquery.min.js'),
+            array('dist/assets/bs3/js/bootstrap.min.js'),
+            array('dist/assets/plugins/jquery-navgoco/jquery.navgoco.js'),
+            array('dist/js/main.js'),
         );
         
         $this->carabiner->group('admin', array('js' => $js["global"]));
-        $this->carabiner->group('admin-themes', array('js' => $js["theme"]));
+        
+        $this->data["tpl_title"] = "Control Panel JabarCMS";
+        $this->data["page_title"] = "Dashboard";
 
         // ================================ END CITSTUDIO CONFIG =======
 

@@ -11,6 +11,10 @@ function ctTemplate($type = 'front', $template = 'default') {
     return $ci->config->item('template_path') . '/' . $ci->config->item($type . '_template') . '/' . ($template == 'default' ? $ci->config->item('template_container_file') : $template);
 }
 
+function ctView($filename='index',$data=NULL) {
+    $ci = &get_instance();
+    $ci->load->view($filename, $data);
+}
 function ctPartial($part = 'front', $data = array(), $type = 'front') {
     $ci = &get_instance();
     $ci->load->view($ci->config->item('template_path') . '/' . $ci->config->item($type . '_template') . '/' . $part, $data);

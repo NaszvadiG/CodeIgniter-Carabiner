@@ -10,17 +10,38 @@ class Admin extends MX_Controller
 
     public function index() 
     {
+        
         $this->data["carabiner_css"] = 'admin-plugin';
+        $css["chart"] = array(
+            array('dist/assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css'),
+            array('dist/css/plugins/rickshaw.min.css'),
+            array('dist/css/plugins/morris.min.css'),
+        );
+        $this->carabiner->group('admin-plugin', array('css' => $css["chart"]));
+        
         $this->data["carabiner_js"] = 'admin-chart';
+        $this->data["carabiner_js_pages"] = 'admin-dashboard';
         
         $js["chart"] = array(
-            array('bower_components/raphael/raphael-min.js'),
-            array('bower_components/morrisjs/morris.min.js'),
-            array('js/morris-data.js'),
+            array('dist/assets/plugins/jquery-sparkline/jquery.sparkline.js'),
+            array('demo/js/demo.js'),
+            array('dist/assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js'),
+            array('dist/assets/plugins/jquery-jvectormap/maps/world_mill_en.js'),
+            array('dist/assets/plugins/rickshaw/js/vendor/d3.v3.js'),
+            array('dist/assets/plugins/rickshaw/rickshaw.min.js'),
+            array('dist/assets/plugins/flot/jquery.flot.js'),
+            array('dist/assets/plugins/flot/jquery.flot.resize.js'),
+            array('dist/assets/plugins/raphael/raphael-min.js'),
+            array('dist/assets/plugins/morris/morris.min.js'),
         );
+        
         $this->carabiner->group('admin-chart', array('js' => $js["chart"]));
         
-        $this->data['view'] = 'dashboard';
+        $js["dashboard"] = array(array('demo/js/dashboard.js'));
+        $this->carabiner->group('admin-dashboard', array('js' => $js["dashboard"]));
+        
+        
+        $this->data['view'] = 'dashboard/index';
         $this->load->view(ctTemplate('admin'), $this->data);
     }
     
